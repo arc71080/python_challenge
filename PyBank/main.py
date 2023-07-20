@@ -29,14 +29,14 @@ with open(budget_data) as csvfile:
         total_profit = total_profit + int(row[1])
 
     #read rows in the profits/losses 
-    #used Source 1 here to find the profit change rows 33-44
+    #used Source 1 here to find the profit change rows 27-31
     for x in range(1, len(profit)):
         profit_change.append((int(profit[x]) - int(profit[x-1])))
     
     # calculate average of the profit change
         profit_average = sum(profit_change) / len(profit_change)
 
-        #calculate the greatest and leastest increase of profits 
+        #calculate the greatest and least increase of profits 
         max_profits = max(profit_change)
         min_profits = min(profit_change)
 
