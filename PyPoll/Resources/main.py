@@ -17,7 +17,7 @@ with open(election_data) as csvfile:
 
     for row in csvreader:
 
-        #add data from the rows needed
+        #add data from the column needed
         votes.append(row[0])
         candidates_list.append(row[2])
     
