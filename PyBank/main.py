@@ -20,10 +20,10 @@ with open(budget_data) as csvfile:
 
     for row in csvreader:
 
-        #add data from first row 
+        #add data from first column
         months.append(row[0])
 
-        #add data from second row into total_profit
+        #add data from second column into total_profit
         profit.append(int(row[1]))
         #calculate the total profit 
         total_profit = total_profit + int(row[1])
@@ -33,7 +33,7 @@ with open(budget_data) as csvfile:
     for x in range(1, len(profit)):
         profit_change.append((int(profit[x]) - int(profit[x-1])))
     
-    # calculate average of the profit change
+    #calculate average of the profit change
         profit_average = sum(profit_change) / len(profit_change)
 
         #calculate the greatest and least increase of profits 
